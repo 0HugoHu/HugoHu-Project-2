@@ -7,6 +7,11 @@
 [![Test](https://github.com/nogibjj/HugoHu-Project-2/actions/workflows/tests.yml/badge.svg)](https://github.com/nogibjj/HugoHu-Project-2/actions/workflows/tests.yml)
 
 
+[Youtube Video Here](https://youtu.be/tKc4hfgMkNs) 
+
+![YouTube Video Views](https://img.shields.io/youtube/views/tKc4hfgMkNs)
+
+
 ## Individual Project #2: Rust CLI Binary with SQLite
 
 ### Description
