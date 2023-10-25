@@ -1,8 +1,8 @@
 // lib.rs
 
 extern crate mysql;
-use mysql as my;
 use my::prelude::*;
+use mysql as my;
 
 pub fn run(database_url: &str) -> Result<(), Box<dyn std::error::Error>> {
     let pool = my::Pool::new(database_url)?;
@@ -45,7 +45,6 @@ pub fn run(database_url: &str) -> Result<(), Box<dyn std::error::Error>> {
     println!("Items in the database after deletion:");
     display_items(&mut conn)?;
 
-
     // Drop the items table
     let drop_query = "DROP TABLE items";
     conn.query_drop(drop_query)?;
@@ -56,13 +55,15 @@ pub fn run(database_url: &str) -> Result<(), Box<dyn std::error::Error>> {
 fn display_items(conn: &mut my::PooledConn) -> Result<(), Box<dyn std::error::Error>> {
     let select_query = "SELECT id, name, description FROM items";
     let items: Vec<(i32, String, Option<String>)> = conn
-        .query_map(
-            select_query,
-            |(id, name, description)| (id, name, description),
-        )?;
+        .query_map(select_query, |(id, name, description)| {
+            (id, name, description)
+        })?;
 
     for item in &items {
-        println!("Item: id={}, name={}, description={:?}", item.0, item.1, item.2);
+        println!(
+            "Item: id={}, name={}, description={:?}",
+            item.0, item.1, item.2
+        );
     }
 
     if items.is_empty() {
@@ -71,4 +72,3 @@ fn display_items(conn: &mut my::PooledConn) -> Result<(), Box<dyn std::error::Er
 
     Ok(())
 }
-
