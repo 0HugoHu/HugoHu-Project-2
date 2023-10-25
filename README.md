@@ -12,6 +12,8 @@
 ### Description
 This project is a CLI binary written in Rust that uses MySQL to store data. The program shows the CRUD (Create, Read, Update and Delete) operations as well as tests in pure Rust language.
 
+**Note:** I'm using ```MySQL``` instead of SQLite because previously I have configured and used MySQL for most projects.
+
 ### Dependencies
 - Rust
 ```bash
@@ -55,4 +57,4 @@ The ```?``` operator is used to propagate errors, making the code more concise a
 
 
 ### Optimized Rust Binary
-
+![](data/artifact.png)
