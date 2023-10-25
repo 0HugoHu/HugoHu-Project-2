@@ -1,0 +1,8 @@
+[package]
+name = "project2"
+version = "0.1.0"
+authors = ["Hugo Hu <hugo.hu@duke.edu>"]
+edition = "2018"
+
+[dependencies]
+mysql = "24.0.0"

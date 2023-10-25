@@ -1,0 +1,31 @@
+name: Build and Package Rust Binary
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: stable
+
+    - name: Build Rust Binary
+      run: |
+        cargo build --release
+        cp target/release/project2 $GITHUB_WORKSPACE
+
+    - name: Package Binary as Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: optimized-binary
+        path: $GITHUB_WORKSPACE/project2
