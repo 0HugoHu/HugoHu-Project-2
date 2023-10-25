@@ -22,10 +22,9 @@ jobs:
     - name: Build Rust Binary
       run: |
         cargo build --release
-        cp target/release/project2 $GITHUB_WORKSPACE
 
     - name: Package Binary as Artifact
       uses: actions/upload-artifact@v2
       with:
         name: optimized-binary
-        path: $GITHUB_WORKSPACE/project2
+        path: target/release/project2
