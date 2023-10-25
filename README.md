@@ -1,3 +1,12 @@
+[![Install](https://github.com/nogibjj/HugoHu-Project-2/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/HugoHu-Project-2/actions/workflows/lint.yml)
+
+[![Lint](https://github.com/nogibjj/HugoHu-Project-2/actions/workflows/rustfmt.yml/badge.svg)](https://github.com/nogibjj/HugoHu-Project-2/actions/workflows/rustfmt.yml)
+
+[![Format](https://github.com/nogibjj/HugoHu-Project-2/actions/workflows/binary.yml/badge.svg)](https://github.com/nogibjj/HugoHu-Project-2/actions/workflows/binary.yml)
+
+[![Test](https://github.com/nogibjj/HugoHu-Project-2/actions/workflows/tests.yml/badge.svg)](https://github.com/nogibjj/HugoHu-Project-2/actions/workflows/tests.yml)
+
+
 ## Individual Project #2: Rust CLI Binary with SQLite
 
 ### Description
